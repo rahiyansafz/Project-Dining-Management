@@ -54,9 +54,10 @@ h1 {
     position: absolute;
     display: inline-block;
     left: 40px;
-    text-align: center;
-    width: 40px;
-    height: 40px;
     top: 150px;
+  }
+  .hidden-logo{
+    width: 80px;
+    height:80px
   }
 }
