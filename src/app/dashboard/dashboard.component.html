@@ -1,0 +1,105 @@
+<div class="menu">
+	<h6>
+		Assalamualaikum <span id="title" *ngIf="user">{{user | titlecase }}</span>
+	</h6>
+</div>
+
+<div class="boxes">
+	<div class="container">
+	</div>
+	<div class="box-2">
+		<p>Don't Forget To Pray Before You Eat!</p>
+	</div>
+	<div class="box-3">
+		<ul>
+			<li>
+				{{ brk }} {{ dim1 }}
+			</li>
+			<li>
+				{{ lnch }} {{ dim2 }}
+			</li>
+			<li>
+				{{ dnr }} {{ dim3 }}
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="menu-boxes">
+	<div class="time">
+		<h5>Today's Menu:<span class="date">{{today | date:'fullDate'}}</span></h5>
+	</div>
+	<div class="breakfast">
+		<p>Let us know if you're in for today or not!</p>
+		<ol class="switches">
+			<li>
+				<input type="checkbox" id="1" (click)="onToggleBreakfast()"/>
+				<label for="1">
+          <span *ngFor="let meal of todaysMeal | keyvalue">{{meal.value}}</span>
+          <span></span>
+        </label>
+			</li>
+		</ol>
+
+		<p class="eggy">Touch the egg for an extra egg</p>
+
+		<button [ngStyle]="{'background-color': withEgg === true ? 'yellow' : 'white'}" id="change" (click)="myEgg()" class="egg-shape"></button>
+
+	</div>
+
+	<div class="lunch">
+		<p>Let us know if you're in for today or not!</p>
+		<ol class="switches">
+			<li>
+				<input type="checkbox" id="2" (click)="onToggleLunch()"/>
+				<label for="2">
+          <span *ngFor="let meal of dupursMeal | keyvalue">{{meal.value}}</span>
+          <span></span>
+        </label>
+			</li>
+		</ol>
+
+		<p class="eggy">touch the egg for an extra egg</p>
+
+		<button [ngStyle]="{'background-color': withEgg2 === true ? 'yellow' : 'white'}" id="change" (click)="myEgg2()" class="egg-shape"></button>
+	</div>
+
+	<div class="dinner">
+		<p>Let us know if you're in for today or not!</p>
+		<ol class="switches">
+			<li>
+				<input type="checkbox" id="3" (click)="onToggleDinner()" />
+				<label for="3">
+          <span *ngFor="let meal of raatsMeal | keyvalue">{{meal.value}}</span>
+          <span></span>
+        </label>
+			</li>
+		</ol>
+
+		<p class="eggy">touch the egg for an extra egg</p>
+
+		<button [ngStyle]="{'background-color': withEgg3 === true ? 'yellow' : 'white'}" id="change" (click)="myEgg3()" class="egg-shape"></button>
+	</div>
+</div>
+
+<footer>
+	<div class="rating">
+		<h3>Rate Today's Menu!</h3>
+		<div class="rate">
+			<!-- list-inline  -->
+			<ul class="rating-list" *ngFor="let star of stars" style="display: inline-block">
+				<li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+					<i class="fa fa-star"></i>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="announcement">
+		<h3>Announcements!</h3>
+	</div>
+
+	<div class="profile">
+		<h3>Your Profile</h3>
+	</div>
+</footer>

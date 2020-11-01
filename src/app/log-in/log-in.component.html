@@ -1,0 +1,33 @@
+<div class="box">
+	<h6>Sign In</h6>
+	<input
+    [(ngModel)]="userInfo.username"
+    type="text"
+    placeholder="username"
+    required
+  />
+
+	<input
+    [(ngModel)]="userInfo.password"
+    type="password"
+    placeholder="Password"
+    required
+  />
+
+
+	<button
+    class="login"
+    (click)="route2Dashboard()"
+    type="submit"
+    [disabled]="!userInfo.password"
+  >
+   Sign In
+  </button>
+
+	<p class="wrong">{{ wrong }}</p>
+
+	<a href="#">Forgotten account?</a>
+
+</div>
+
+<p>Don't have an account?<a class="reg" routerLink="/signup" href="#">Sign Up</a> </p>
