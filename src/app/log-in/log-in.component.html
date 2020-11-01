@@ -1,4 +1,4 @@
-<div class="box">
+<!-- <div class="box">
 	<h6>Sign In</h6>
 	<input
     [(ngModel)]="userInfo.username"
@@ -30,4 +30,50 @@
 
 </div>
 
-<p>Don't have an account?<a class="reg" routerLink="/signup" href="#">Sign Up</a> </p>
+<p>Don't have an account?<a class="reg" routerLink="/signup" href="#">Sign Up</a> </p> -->
+
+
+
+<div class="box">
+	<div class="left-box">
+		<h1 style="font-family: 'Inter UI', sans-serif; font-size:38px; margin: 30px 10px">{{ title }}</h1>
+		<p style="font-family: 'Inter UI', sans-serif; font-size: 14px;" class="resp">
+			In a world where so many are hungry, <br />
+  may we eat the food with humble hearts.
+</p>
+	</div>
+
+	<div class="box-right">
+		<div class="form">
+			<label for="text">username</label>
+			<input
+    [(ngModel)]="userInfo.username"
+    type="text"
+
+    required
+  />
+
+			<label for="password">Password</label>
+			<input
+    [(ngModel)]="userInfo.password"
+    type="password"
+
+    required
+  />
+
+			<p class="wrong">{{ wrong }}</p>
+
+
+			<button
+    class="login"
+    (click)="route2Dashboard()"
+    type="submit"
+    [disabled]="!userInfo.password"
+  >
+   Sign In
+  </button>
+		</div>
+
+
+	</div>
+</div>

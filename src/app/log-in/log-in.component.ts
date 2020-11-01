@@ -11,6 +11,7 @@ import { INFO } from "../mock-list";
 })
 export class LogInComponent implements OnInit {
   // INFO: ListModel[]
+  title = "Quantum Cafeteria Meal"
 
   wrong = "";
 
@@ -46,7 +47,7 @@ export class LogInComponent implements OnInit {
     if (passed === true) {
       this.router.navigateByUrl(`/dashboard?user=${this.userInfo.username}`);
     } else {
-      this.wrong = "wrong username or password!!!";
+      alert(this.wrong = "wrong username or password!!!");
     }
   }
 }

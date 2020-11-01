@@ -83,3 +83,57 @@ export class AppComponent implements OnInit {
 // }) // one // two ​​​​// four
 
 // console.log(words);  //['two', 'three',​​​​ 'four']
+
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// // Import stylesheets
+// import "./style.css";
+
+// // Write Javascript code!
+// const appDiv = document.getElementById("app");
+// appDiv.innerHTML = `<h1>JS Starter</h1>`;
+
+// // let str = "HELLO";
+
+// // let summ = "";
+
+// // for (let i = 0; i < str.length; i++) {
+// //   summ += str[i];
+// // }
+// // console.log(summ);
+
+// // let arr = summ.split(" ");
+
+// // console.log(arr);
+
+// let makeString = "foundation";
+
+// let convertArray = makeString.split("");
+
+// let text = "";
+
+// for (let i = 0; i < makeString.length; i++) {
+//   text += convertArray[i] + (convertArray.length - i);
+// }
+
+// let sum = 1;
+// for (let i = 0; i < text.length; i++) {
+//   if (i % 2 !== 0) {
+//     sum *= text[i];
+//     // console.log(i);
+//     console.log(text[i]);
+//   }
+// }
+
+// console.log(text);
+// console.log(sum);
